@@ -11,6 +11,7 @@ import {
   MarkerOptions,
   Marker
 } from '@ionic-native/google-maps';
+import {GoogleMapsPage} from "../google-maps/google-maps";
 
 @Component({
   selector: 'page-home',
@@ -18,14 +19,16 @@ import {
 })
 export class HomePage {
 
+  googleMapsPage = GoogleMapsPage;
+
   constructor(public navCtrl: NavController,
               private googleMaps: GoogleMaps,
               private platform: Platform) {
 
-    platform.ready().then(()=>{
-      console.log("PLATFORM READY!");
-      this.loadMap();
-    });
+    // platform.ready().then(()=>{
+    //   console.log("PLATFORM READY!");
+    //   this.loadMap();
+    // });
 
   }
 
